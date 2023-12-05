@@ -3,7 +3,9 @@ import mongoose from "mongoose";
 import { configDotenv } from "dotenv";
 import productsRoutes from './routes/products.js';
 import authRoutes from './routes/auth.js';
-import usersRoutes from './routes/user.js';
+import usersRoutes from './routes/users.js';
+import ordersRoutes from './routes/orders.js';
+
 
 
 
@@ -24,6 +26,8 @@ mongoose.connect(process.env.MONGODB_URL).then(() => {
 app.use('/api/products', productsRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/users', usersRoutes);
+app.use('/api/users', usersRoutes);
+
 
 
 
